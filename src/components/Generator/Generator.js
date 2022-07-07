@@ -6,10 +6,11 @@ import './Generator.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Card } from 'react-bootstrap'
 
-
+// Props passed from App.js is being set to the Giphy url & Title
 const Generator = (props) => {
     const [fetching, setFetching] = useState("false")
 
+// Using axios to fetch the data from giphy api to send random giph
     useEffect(() => {
         const fetchData = async () => {
           const apiRoot = "https://api.giphy.com/v1/gifs/"
@@ -31,7 +32,6 @@ const Generator = (props) => {
         <Card.Title>{props.title}</Card.Title>
         <Card.Body>
           <Button 
-          variant="dark"
           onClick={() => setFetching(!fetching)}
           >Click For Random GIPHY </Button>
         </Card.Body>

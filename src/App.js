@@ -20,7 +20,7 @@ const App = () => {
       setTitle={setTitle}
        ></Generator>
      <SocialShare
-     giphy={giphy}
+      giphy={giphy}
      title={title}
      ></SocialShare>
     </div>

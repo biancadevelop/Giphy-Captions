@@ -1,5 +1,4 @@
 import React from 'react'
-
 import '../../App.css';
 import './SocialShare.css'
 import {
@@ -15,7 +14,6 @@ import {
 const SocialShare = (props) => {
 
     const title = 'Check out this GIPHY!'
-    
     
   return (
     <div className='social-share-container'>
