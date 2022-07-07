@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import './App.css';
+import '../../App.css';
+import './Generator.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Card } from 'react-bootstrap'
 
@@ -21,19 +22,15 @@ const Generator = () => {
 
   return (
     <div className='main-container'>
-      <Card style={{ width: '18rem' }}>
+      <Card>
         <Card.Img 
             variant="top" 
             src={giphy} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Fetch Random Giphy Images On Click
-          </Card.Text>
           <Button 
-          variant="primary"
+          variant="dark"
           onClick={() => setFetching(!fetching)}
-          >Next</Button>
+          >Click For Random GIPHY</Button>
         </Card.Body>
       </Card>
     </div>

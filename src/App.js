@@ -1,12 +1,14 @@
 import React from 'react'
-import Generator from './Generator';
+import Generator from './components/Generator/Generator';
+import Header from './components/Header/Header'
 import './App.css';
 
 
 const App = () => {
   return (
     <div className='main-container'>
-     <Generator></Generator>
+      <Header></Header>
+      <Generator></Generator>
     </div>
   )
 }
