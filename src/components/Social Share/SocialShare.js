@@ -1,5 +1,5 @@
 import React from 'react'
-import Generator from '../Generator/Generator'
+
 import '../../App.css';
 import './SocialShare.css'
 import {
@@ -12,50 +12,53 @@ import {
 } from 'react-share'
 
 
-const SocialShare = () => {
+const SocialShare = (props) => {
+
+    const title = 'Check out this GIPHY!'
+    
+    
   return (
-    <>
-        <span>Share:</span>
+    <div className='social-share-container'>
+        <h4>Share:</h4>
         <FacebookShareButton 
-        url="https://google.com"
-        quote={"Check out this GIPHY!"}
+        url={props.giphy}
+        quote={title}
         hashtag="#GIPHY"
         >
-        <FacebookIcon logoFillColor="blue" round={true}></FacebookIcon>
+            <FacebookIcon size={40} round={true}></FacebookIcon>
         </FacebookShareButton>
 
         <WhatsappShareButton 
-        url="https://google.com"
-        quote={"Check out this GIPHY!"}
-        hashtag="#GIPHY"
+        title={title}
+        url={props.giphy}
         >
-        <WhatsappIcon round={true}></WhatsappIcon>
+            <WhatsappIcon size={40} round={true}></WhatsappIcon>
         </WhatsappShareButton>
 
         <TwitterShareButton 
-        url="https://google.com"
-        quote={"Check out this GIPHY!"}
-        hashtag="#GIPHY"
+        title={title}
+        hashtags={["GIPHY"]}
+        url={props.giphy}
         >
-        <TwitterIcon round={true}></TwitterIcon>
+            <TwitterIcon size={40} round={true}></TwitterIcon>
         </TwitterShareButton>
 
         <RedditShareButton 
-        url="https://google.com"
-        quote={"Check out this GIPHY!"}
-        hashtag="#GIPHY"
+        title={title}
+        url={props.giphy}
         >
-        <RedditIcon round={true}></RedditIcon>
+            <RedditIcon size={40} round={true}></RedditIcon>
         </RedditShareButton>
 
-        <EmailShareButton 
-        url="https://google.com"
-        quote={"Check out this GIPHY!"}
-        hashtag="#GIPHY"
+        <EmailShareButton
+        subject={title}
+        body={props.title}
+        separator='-----'
+        url={props.giphy}
         >
-        <EmailIcon round={true}></EmailIcon>
+            <EmailIcon size={40} round={true}></EmailIcon>
         </EmailShareButton>
-    </>
+    </div>
   )
 }
 

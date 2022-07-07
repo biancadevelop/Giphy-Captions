@@ -1,5 +1,13 @@
+.generator-container {
+	margin-bottom: 30px;
+}
+
 .card {
 	margin: auto;
 	text-align: center;
 	width: 20rem;
+}
+
+.card-title {
+	margin-top: 20px!important;
 }

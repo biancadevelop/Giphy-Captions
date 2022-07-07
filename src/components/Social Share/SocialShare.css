@@ -1,0 +1,12 @@
+.social-share-container {
+	text-align: center;
+}
+
+.social-share-container > button {
+	margin-right: 15px;
+}
+
+h4 {
+	color: #FFFFFF;
+	margin-bottom: 20px;
+}
