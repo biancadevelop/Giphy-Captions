@@ -10,7 +10,7 @@ import {
 
 } from 'react-share'
 
-
+// Passing props from App.js to use in the share params
 const SocialShare = (props) => {
 
     const title = 'Check out this GIPHY!'

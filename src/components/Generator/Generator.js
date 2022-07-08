@@ -8,6 +8,8 @@ import { Button, Card } from 'react-bootstrap'
 
 // Props passed from App.js is being set to the Giphy url & Title
 const Generator = (props) => {
+
+// On click this fetching state changes which runs our useEffect to make the API call to Giphy
     const [fetching, setFetching] = useState("false")
 
 // Using axios to fetch the data from giphy api to send random giph
@@ -20,7 +22,7 @@ const Generator = (props) => {
           props.setGiphy(`${result.data.data.images.fixed_height.url}`)
           props.setTitle(`${result.data.data.title}`)
         };
-        fetchData()
+        fetchData() 
       }, [fetching]);
 
   return (
